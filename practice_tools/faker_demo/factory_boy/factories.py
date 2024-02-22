@@ -10,6 +10,7 @@ class AccountFactory(factory.Factory):
 
     username = factory.Sequence(lambda n: 'rafsun%s' % n)
     email = factory.LazyAttribute(lambda o: '%s@example.org' % o.username)
+    bio = factory.Faker('text')
     date_joined = factory.LazyFunction(datetime.datetime.now)
 
 
@@ -19,6 +20,8 @@ print(mock_account)
 mock_accounts = AccountFactory.build_batch(5)
 for account in mock_accounts:
     print(account)
+for account in mock_accounts:
+    print(account.username, ': ', account.bio)
 
 """
 Example
