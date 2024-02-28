@@ -18,6 +18,7 @@ print("zipcode: ", fake.zipcode())
 print("locale: ", fake.locale())
 print("license_plate: ", fake.license_plate())
 print("phone_number: ", fake.phone_number())
+print("profile: ", fake.profile())
 
 print("hexify: ", fake.hexify(text="MAC: ^^:^^:^^:^^:^^", upper=True))
 print("bothify: ", fake.bothify(text="ID:2024:???:####:???", letters="ABCDE"))
